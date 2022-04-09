@@ -1,25 +1,12 @@
-import React from "react";
- 
-// We use Route in order to define the different routes of our application
-import { Route, Routes } from "react-router-dom";
- 
-// We import all the components we need in our app
-import Navbar from "./components/navbar";
-import CauseList from "./components/causeList";
-import Edit from "./components/edit";
-import Create from "./components/create";
- 
-const App = () => {
- return (
-   <div>
-     <Navbar />
-     <Routes>
-       <Route exact path="/" element={<CauseList />} />
-       <Route path="/edit/:id" element={<Edit />} />
-       <Route path="/create" element={<Create />} />
-     </Routes>
-   </div>
- );
-};
- 
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      Hello, world!
+    </div>
+  );
+}
+
 export default App;
