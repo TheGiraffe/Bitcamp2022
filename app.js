@@ -9,7 +9,7 @@ require("./config/database");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-const port = 5000
+const port = 3000
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
