@@ -8,9 +8,9 @@ const ProfileSchema = new Schema({
   causes: [{ type: Schema.Types.ObjectId, ref: 'Cause' }],
   skills: [{ type: Schema.Types.ObjectId, ref: 'Skill' }],
   interests: [{ type: Schema.Types.ObjectId, ref: 'Skill' }], // Skill interests, i.e. skills they are interested in learning but may not be very experienced in yet.
-  dislikes: [{ type: Schema.Types.ObjectId, ref: 'Skill' }], // Skills that they have no interest in learning / don't feel very strongly about
-  careerStatus: { type: Schema.Types.ObjectId, ref: 'Career' }, // Data on current income level and other potentially relevant career details
-  futurePlans: { type: Schema.Types.ObjectId, ref: 'Career' }, // Data on potential future income level and other potentially relevant future career details
+  //dislikes: [{ type: Schema.Types.ObjectId, ref: 'Skill' }], // Skills that they have no interest in learning / don't feel very strongly about
+  //careerStatus: { type: Schema.Types.ObjectId, ref: 'Career' }, // Data on current income level and other potentially relevant career details
+  //futurePlans: { type: Schema.Types.ObjectId, ref: 'Career' }, // Data on potential future income level and other potentially relevant future career details
   posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }]
 },{
     timestamps: true,

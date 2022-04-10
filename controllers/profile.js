@@ -37,23 +37,16 @@ function renderquiz(req, res){
 
 function submitquiz(req,res){
     req.body.isOrg = !!req.body.isOrg;
-    console.log(req.body.causes)
-    Promise.all([
-        Cause.find({"_id": req.body.causes}).catch(err => console.error(err)),
-        Skill.find({"_id": String(req.body.skills)}).catch(err => console.error(err)),
-        Skill.find({"_id": String(req.body.interests)}).catch(err => console.error(err)),
-    ])
-    .then( results =>{
-        Profile.create({
-            name: req.body.name,
-            isOrg: req.body.isOrg,
-            causes: results[0],
-            skills: results[1],
-            interests: results[2],
-        })
-        .then(res.redirect('profiles'))
-    })
-    .catch(err => console.error(err))
+
+    Profile.find()
+    .populate('causes','name').populate('skills','name').populate('interests','name').exec((err, causes, skills, interests) => {
+        console.log("Populated Profile " + causes + skills + interests);
+        items.save();
+      })
+      
+      res.redirect('profiles')
+
+
 }
 
 module.exports = {
