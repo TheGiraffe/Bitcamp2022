@@ -1,4 +1,5 @@
 const Cause = require("../models/cause.js");
+const Need = require("../models/need.js");
 
 function index(req, res){
     Cause.find({})
