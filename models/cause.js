@@ -2,12 +2,17 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const CauseModelSchema = new Schema({
-  author: {
-    type: String,
-    required: true,
-  },
-  quote: { type: String, required: true },
+const NeedSchema = new Schema({
+name: { type: String, required: true},
+description: { type: String },
 });
 
-module.exports = mongoose.model("quotes", QuoteModelSchema);
+const CauseSchema = new Schema({
+  name: { type: String, required: true },
+  description: { type: String, required: true },
+  needs: [{ type: Schema.Types.ObjectId, ref: 'Need' }]
+});
+//var Need = mongoose.model('Need', NeedSchema);
+//var Cause = mongoose.model("Cause", CauseSchema);
+
+module.exports = mongoose.model("Cause", CauseSchema);
