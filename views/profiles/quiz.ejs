@@ -11,7 +11,7 @@
     <div>
         <label for="isOrg"><b>Is this Profile for an Organization?</b></label>
         <br>
-        <input type="checkbox" name="isOrg" value="True">Yes, and the Preferred Name is the Organization Name.</input>
+        <input type="checkbox" name="isOrg" value="True"> Yes, and the Preferred Name is the Organization Name.</input>
     </div>
     <br>
     <div><h2>Causes That Are Important to You</h2>
@@ -20,7 +20,7 @@
             <h2>No causes here yet</h2>
         <% } else { %>
             <% causes.forEach(causes => { %>
-                <input type="checkbox" name="causes" value="<%= causes._id %>"><%= causes.name %></input>
+                <input type="checkbox" name="causes" value="<%= causes._id %>"> <%= causes.name %></input>
             <% }) %>
             <% } %>
     </div>
@@ -31,7 +31,7 @@
             <h2>No skills here yet</h2>
         <% } else { %>
             <% skills.forEach(skills => { %>
-                <input type="checkbox" name="skills" value="<%= skills._id %>"><%= skills.name %></input>
+                <input type="checkbox" name="skills" value="<%= skills._id %>"> <%= skills.name %></input>
             <% }) %>
             <% } %>
     </div>
@@ -42,7 +42,7 @@
             <h2>No skills here yet</h2>
         <% } else { %>
             <% skills.forEach(skills => { %>
-                <input type="checkbox" name="interests" value="<%= skills._id %>"><%= skills.name %></input>
+                <input type="checkbox" name="interests" value="<%= skills._id %>"> <%= skills.name %></input>
             <% }) %>
             <% } %>
     </div>

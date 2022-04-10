@@ -5,11 +5,19 @@ const Cause = require("../models/cause.js");
 const mongoose = require('mongoose')
 
 function index(req, res){
-    Profile.find({})
-    .then(profiles => {
-        console.log(profiles)
+    Promise.all([
+        Profile.find({}),
+        Cause.find({}),
+        Skill.find({}),
+        Career.find({}),
+    ])
+    
+    .then(results => {
         res.render('profiles/index',{
-            profiles,
+            profiles: results[0],
+            causes:  results[1],
+            skills:  results[2],
+            careers:  results[3],
             title: "What I Can Do Today"
         })
     })

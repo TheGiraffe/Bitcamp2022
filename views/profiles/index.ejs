@@ -5,12 +5,38 @@
     <h2>No profiles here yet</h2>
 <% } else { %>
     <% profiles.forEach(profile => { %>
+        <h4>User:</h4>
         <li><%= profile.name %></li>
-        <li><%= profile.causes %></li>
-        <li><%= profile.skills %></li>
-        <li><%= profile.interests %></li>
+        <br>
+        <h4>Your Causes:</h4>
+        <%causes.forEach(cause =>{ %>
+            <%profile.causes.forEach(profcause =>{ %>
+                    <% if (profcause == cause.id){ %>
+                        <li><%= cause.name %></li>
+                    <%}%>
+            <% }) %>
+        <% }) %>
+<br>
+    <h4>Your Skills:</h4>
+    <%skills.forEach(skill =>{ %>
+        <%profile.skills.forEach(profskill =>{ %>
+                <% if (profskill == skill.id){ %>
+                    <li><%= skill.name %></li>
+                <%}%>
+        <% }) %>
+    <% }) %>
+    <br>
+    <h4>Your Interests / Future Skills:</h4>
+    <%skills.forEach(interest =>{ %>
+        <%profile.interests.forEach(profinterest =>{ %>
+                <% if (profinterest == interest.id){ %>
+                    <li><%= interest.name %></li>
+                <%}%>
+        <% }) %>
+    <% }) %>
 
     <% }) %>
     <% } %>
+<br>
 
-    <a href="../profiles/quiz">Add a Quiz</a>
+    <a href="../profiles/quiz">Update Preferences</a>
