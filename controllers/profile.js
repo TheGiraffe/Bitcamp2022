@@ -41,7 +41,6 @@ function submitquiz(req,res){
     Profile.find()
     .populate('causes','name').populate('skills','name').populate('interests','name').exec((err, causes, skills, interests) => {
         console.log("Populated Profile " + causes + skills + interests);
-        items.save();
       })
       
       res.redirect('profiles')
