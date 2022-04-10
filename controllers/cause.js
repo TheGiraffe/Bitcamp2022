@@ -7,7 +7,7 @@ function index(req, res){
         console.log(causes)
         res.render('causes/index',{
             causes,
-            title: "hi"
+            title: "fuck"
         })
     })
     .catch(err => console.error(err))
