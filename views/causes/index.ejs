@@ -8,7 +8,7 @@
   <title><%= title %></title>
 </head>
 <body>
-  <h1>The title is <%= title %>: i.e. the amount of fucks I give</h1>
+  <h1>The title is <%= title %></h1>
 
   <form action = "/causes" method="POST">
     <div>
@@ -19,9 +19,9 @@
       <label for ="description">Description</label>
       <input type="text" name="description" id="description"></input>
     </div>
-    <button type="submit">here we fucking go</button>
+    <button type="submit">here we go</button>
   </form>
-  <h2> and the fuck database says I worry a lot about: </h2>
+  <h2> and the database says I worry a lot about: </h2>
   <% if (!causes.length) { %>
     <h2>No causes here yet</h2>
 <% } else { %>

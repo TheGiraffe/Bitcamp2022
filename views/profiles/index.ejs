@@ -1,0 +1,9 @@
+<% if (!profiles.length) { %>
+    <h2>No profiles here yet</h2>
+<% } else { %>
+    <% profiles.forEach(profile => { %>
+        <li><%= profile.name %></li>
+    <% }) %>
+    <% } %>
+
+    <a href="../profiles/quiz">Add a Quiz</a>

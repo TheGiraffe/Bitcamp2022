@@ -16,9 +16,10 @@ const CareerSchema = new Schema({
     },
     income: { 
         type: String, 
-        enum: ['student','low income','mid income', 'high income', 'unemployed'],
+        enum: ['student','low income','mid income', 'high income', 'unemployed', 'not sure'],
         default: 'student'
     },
+    donate: { type: String },
 
 });
 
