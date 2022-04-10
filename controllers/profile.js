@@ -10,7 +10,7 @@ function index(req, res){
         console.log(profiles)
         res.render('profiles/index',{
             profiles,
-            title: "hi"
+            title: "What I Can Do Today"
         })
     })
     .catch(err => console.error(err))
